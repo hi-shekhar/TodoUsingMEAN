@@ -1,0 +1,89 @@
+
+div,input,a,p,ul,li{
+    box-sizing: border-box;
+    margin:0;
+    padding: 0;
+}
+.btn{
+    margin-bottom: 3PX !important;
+}
+.form-control{
+    display: inline;
+}
+.todoDiv{
+    background-color: #FBF7FC;
+    height:2000px;
+    margin: 0 auto;
+}
+.seracUndohDiv{
+    padding-bottom: 10px;       
+}
+
+.todoEnterBox{
+    padding: 20px 0;
+}
+.toDoItemDiv{
+    min-height:315px;
+    width:500px;
+    padding: 20px 0;
+    margin: 0 auto;
+    border: 2px solid #333;
+    margin-bottom: 20px;
+}
+.textDiv,.actionDiv{
+    display: inline-block;
+}
+.arrayBox{
+    margin-bottom: 10px;
+}
+.confirmDiv {
+    -webkit-transition: opacity 1s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+.ng-hide {
+  -webkit-transition: opacity 1s; /* For Safari 3.1 to 6.0 */
+    transition: opacity 0.25s;
+    opacity: 0;
+}
+pagination{
+    -webkit-transition: opacity 1s;  /*For Safari 3.1 to 6.0 */
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+.paginationDiv{
+    margin:0 auto;
+    width:auto;
+    text-align: center;
+    font-family: Serif;
+    font-weight: bold;
+}
+.paginationDiv ul{
+    display: inline-block;
+}
+.paginationDiv ul li{
+    display: inline-block;
+}
+
+.paginationDiv li a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    border: 1px solid #4081ed;
+    cursor: pointer;
+}
+
+.paginationDiv li a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+.paginationDiv a:hover:not(.active) {
+    background-color: #5c93ed;
+}
+.paginationDiv .disableAnchor{
+   pointer-events: none;
+    cursor:not-allowed;
+    color:rgb(223, 221, 221);
+}

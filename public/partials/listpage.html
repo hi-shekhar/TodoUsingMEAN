@@ -1,0 +1,45 @@
+<div class="todoDiv">
+    <div class="todoEnterBox  text-center">
+        <div class="textDiv">
+            <input type="text" class="text-center form-control" placeholder="Enter List" ng-model="led.item.listitem" />
+        </div>
+        <div class="actionDiv">
+            <button type="button" class="btn btn-success" ng-click="led.putItem(led.item)">OK</button>
+        </div>
+    </div>
+    <div class="seracUndohDiv text-center">
+        <!-- <div class="textDiv">
+            <input type="text"  class="form-control" ng-model="led.searchText" placeholder="Search Item"/>
+        </div> -->
+        <div class="actionDiv">
+            <button type = "button" class="btn btn-primary" ng-click="led.undoDelete()" ng-disabled="led.disableUndoButton">Undo Delete</button>
+        </div>
+    </div>
+    <div class="toDoItemDiv">
+        <div class="text-center" ng-show="led.hideRemoveButton">
+            <button type="button" class="btn btn-info" ng-click="led.removeTop()">Remove From Top</button>
+            <button type="button" class="btn btn-info" ng-click="led.removeBottom()">Remove From Bottom</button>
+        </div>
+        <br>
+        <div class="arrayBox text-center" ng-repeat="data in led.itemArray | limitTo : 5 : led.beginPagination track by $index">
+            <div class="actionDiv">
+                <button type="button" class="btn btn-primary" ng-click="led.updateItem($index)" ng-disabled="led.disableUpdate[$index]">UPDATE</button>
+            </div>
+            <div class="textDiv">
+                <input type="text" class="text-center form-control dataInputClass" ng-model="data" ng-change="led.dataIsChanging($index)"
+                    readonly>
+            </div>
+            <div class="actionDiv">
+                <button type="button" class="btn btn-danger" ng-click="led.removeItem($index)">REMOVE</button>
+            </div>
+            <div class="confirmDiv" ng-show="led.confirmDivVisibility[$index]">
+                <br />
+                <button type="button" class="btn btn-warning" ng-click="led.confirmChange($index)">CONFIRM CHANGE</button>
+                <button type="button" class="btn btn-warning" ng-click="led.cancelChange($index)">CANCEL CHANGE</button>
+            </div>
+        </div>
+    </div>
+    <pagination getarray="led.itemArray"></pagination>
+</div>
+
+<ng-transclude></ng-transclude>

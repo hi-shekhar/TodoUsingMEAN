@@ -1,0 +1,17 @@
+<div class="paginationDiv">
+    <ul>
+        <li>
+            <a ng-click="movePage('first');" ng-class="{'disableAnchor': selectedPage == 0}">FIRST</a>
+        </li><li>
+            <a ng-click="movePage('bck');" ng-class="{'disableAnchor': selectedPage == 0}">
+                << </a>
+        </li><li ng-repeat="pageNumber in getarray | limitTo : paginationLength : -3  track by $index">
+            <a ng-click="movePage($index+1)" ng-class="{'active':selectedPage == $index}">{{$index + 1}}</a>
+        </li><li>
+            <a ng-click="movePage('fwd');" ng-class="{'disableAnchor': paginationLength == 0 || lastPage == selectedPage + 1}"> >> </a>
+        </li><li>
+            <a ng-click="movePage('last');" ng-class="{'disableAnchor': paginationLength == 0 || lastPage == selectedPage + 1}">LAST</a>
+        </li>
+    </ul>
+</div>
+
