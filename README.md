@@ -1,7 +1,14 @@
-"# todoMEANApp" 
+# Todo MEAN Application 
 
 A todo list implement using MEAN
-Angular js 1.58 
-Custom Pagination is integrated.
-User has Option to add , remove  , edit  and update items.
-User can also do undo when item is deleted.
+
+## Built With
+1. Mongo DB
+2. Express js
+3. Angular js 1.58 
+4. Node.js
+
+## Features
+1. Add , Remove, Edit and Update items.
+2. Option to Undo when item is deleted.
+2. Custom Pagination
